@@ -1,185 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jamie Turner | Grant Strategist · Technical Scribe · AI Specialist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* ========== RESET & BASE ========== */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --cream: #FAF7F2;
-            --deep-green: #2C4A3E;
-            --gold: #B8860B;
-            --warm-gray: #6B6560;
-            --text-dark: #2D2A26;
-            --white: #FFFFFF;
-            --light-border: #E8E2DA;
-        }
-        body { font-family: 'Lora', Georgia, serif; background-color: var(--cream); color: var(--text-dark); line-height: 1.8; }
+# The Katrina Allusion: Why AI Can't Read the Room
 
-        /* ========== NAVIGATION ========== */
-        nav { background-color: var(--white); border-bottom: 1px solid var(--light-border); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
-        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-size: 1.4rem; font-weight: 700; color: var(--deep-green); text-decoration: none; }
-        .nav-logo span { color: var(--gold); }
-        .nav-links { list-style: none; display: flex; gap: 2rem; }
-        .nav-links a { font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--warm-gray); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; }
-        .nav-links a:hover { color: var(--deep-green); }
+The ongoing integration of artificial intelligence into everyday life raises many important conversations about the extent of its capabilities and limitations. One pivotal aspect is the ability of AI to understand social nuance and context in human interactions.
 
-        /* ========== HERO SECTION ========== */
-        .hero { max-width: 900px; margin: 0 auto; padding: 6rem 2rem 4rem; text-align: center; }
-        .hero h1 { font-size: 3.2rem; color: var(--deep-green); margin-bottom: 0.5rem; }
-        .hero .tagline { font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 2rem; }
-        .hero .intro { font-size: 1.25rem; color: var(--warm-gray); max-width: 700px; margin: 0 auto; line-height: 1.8; }
+## The Importance of Context
 
-        /* ========== SECTION STYLING ========== */
-        section { padding: 5rem 2rem; }
-        .section-title { text-align: center; font-size: 2rem; color: var(--deep-green); margin-bottom: 3rem; }
-        .container { max-width: 1100px; margin: 0 auto; }
+Human emotions and social cues are often deeply embedded in context. Cultural background, personal experiences, and situational variables significantly influence how humans communicate and interpret messages. This complexity poses a challenge for AI, which relies on data and algorithms to 'understand' language.
 
-        /* ========== SERVICES GRID ========== */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .card { background: var(--white); border: 1px solid var(--light-border); padding: 3rem 2rem; border-radius: 8px; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .card h3 { color: var(--deep-green); margin-bottom: 1rem; font-size: 1.4rem; }
-        .card p { font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--warm-gray); }
+## Limitations of AI in Emotional Intelligence
 
-        /* ========== PORTFOLIO / WRITING ========== */
-        .writing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-        .article-preview { margin-bottom: 3rem; }
-        .tag { font-family: 'Inter', sans-serif; font-size: 0.7rem; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 0.5rem; display: block; }
-        .read-more { font-family: 'Inter', sans-serif; font-weight: 700; color: var(--deep-green); text-decoration: none; font-size: 0.9rem; }
+While AI can analyze text and respond appropriately based on predefined parameters, it doesn't possess genuine emotional intelligence. This limitation is evident in customer service bots that can follow a script but fail to grasp the emotional weight of a customer's distress.
 
-        /* ========== ABOUT SECTION ========== */
-        .about-section { background-color: var(--deep-green); color: var(--cream); }
-        .about-content { max-width: 750px; margin: 0 auto; }
-        .about-section h2 { color: var(--white); text-align: center; margin-bottom: 2rem; }
-        .heritage-box { border: 1px solid rgba(255,255,255,0.1); padding: 2rem; margin-top: 3rem; border-radius: 8px; display: flex; gap: 2rem; align-items: center; }
-        .heritage-box img { width: 150px; border-radius: 4px; filter: grayscale(100%); }
+## The Katrina Allusion
 
-        footer { text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--light-border); color: var(--warm-gray); font-family: 'Inter', sans-serif; font-size: 0.9rem; }
-        footer a { color: var(--deep-green); text-decoration: none; font-weight: 600; }
+The reference to Hurricane Katrina emphasizes the significance of understanding complex emotional situations. During and after the hurricane, the varying responses highlighted a disconnect between human empathy and algorithmic responses. AI can compartmentalize information but cannot authentically empathize with human experiences.
 
-        @media (max-width: 768px) {
-            .writing-grid { grid-template-columns: 1fr; }
-            .heritage-box { flex-direction: column; text-align: center; }
-        }
-    </style>
-</head>
-<body>
+## Conclusion
 
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="nav-logo">Jamie Turner<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section class="hero">
-        <p class="tagline">Strategic Writing & Technical Logic</p>
-        <h1>Jamie Turner</h1>
-        <p class="intro">
-            Leveraging 15 years of educational expertise and a Master of Arts in English to bridge the gap between human narrative and technical precision.
-        </p>
-    </section>
-
-    <section id="services" style="background-color: var(--white); border-top: 1px solid var(--light-border);">
-        <div class="container">
-            <h2 class="section-title">Professional Services</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Grant Writing</h3>
-                    <p>Expertise in educational and non-profit grant development. I translate organizational missions into high-compliance, persuasive proposals for federal and private funding.</p>
-                </div>
-                <div class="card">
-                    <h3>Technical Scribing</h3>
-                    <p>Logic-based documentation and system auditing. I specialize in converting complex institutional catalogs and data into actionable, accurate technical language.</p>
-                </div>
-                <div class="card">
-                    <h3>AI Strategy</h3>
-                    <p>Human-centric feedback for large language models. I refine AI output through RLHF to ensure narrative nuance, factual grounding, and ethical alignment.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio">
-        <div class="container">
-            <h2 class="section-title">Selected Portfolio</h2>
-            <div class="writing-grid">
-                <div>
-                    <span class="tag">Featured Narrative</span>
-                    <h3>The Den of the Faithful</h3>
-                    <p style="margin-bottom: 1rem;">An analysis of "Wolf Pack" dynamics within modern institutions and the narrative cost of telling the truth. Published on Medium.</p>
-                    <a href="https://medium.com/@mrsjamieturner109" class="read-more">Read Essay →</a>
-                    
-                    <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--light-border);">
-                    
-                    <span class="tag">AI & Rhetoric</span>
-                    <h3>The Swift Test</h3>
-                    <p style="margin-bottom: 1rem;">Exploring the intersection of 18th-century satire and modern AI. Can machine learning detect the nuances of human irony?</p>
-                    <a href="https://medium.com/@mrsjamieturner109/the-swift-test-why-your-ai-is-socially-awkward-819d875946d7" class="read-more">Read on Medium →</a>
-                </div>
-                <div>
-                    <span class="tag">Grant Sample (Educational)</span>
-                    <h3>Literacy Initiative Strategy</h3>
-                    <p style="margin-bottom: 1rem;">A case study in aligning regional educational standards with foundation-level funding goals. Focused on rural Mississippi literacy outcomes.</p>
-                    <span style="color: var(--warm-gray); font-size: 0.9rem; font-style: italic;">Sample available upon request.</span>
-
-                    <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--light-border);">
-
-                    <span class="tag">Technical Logic</span>
-                    <h3>DegreeWorks Audit Logic</h3>
-                    <p style="margin-bottom: 1rem;">Demonstrating the translation of academic catalogs into proprietary logic-based scribing language with 100% accuracy.</p>
-                    <span style="color: var(--warm-gray); font-size: 0.9rem; font-style: italic;">Technical documentation sample.</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-section" id="about">
-        <div class="about-content">
-            <h2>About Jamie</h2>
-            <p>
-                I hold a Master of Arts in English with a 4.0 GPA. My career began in the classroom, where I spent 15 years mastering the art of instructional design and curriculum architecture. Today, I use that foundation to help organizations secure funding and document their most vital processes.
-            </p>
-            <p style="margin-top: 1rem;">
-                My approach is defined by a simple principle: Truth over tradition. Whether I am writing a grant or training an AI model, my goal is to find the most authentic and precise way to tell the story.
-            </p>
-
-            <div class="heritage-box">
-                <img src="clipping-headline.jpg" alt="Jamie age 6">
-                <div>
-                    <p style="font-size: 0.9rem; font-style: italic; color: var(--gold);">"Writing — because when you get through writing you can go over it and you might get something out of it."</p>
-                    <p style="font-size: 0.8rem; margin-top: 0.5rem; color: #A9B5AE;">— Jamie, age 6, Wayne County Newspaper</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" style="text-align: center;">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p style="margin-bottom: 2rem;">Available for grant consulting, technical scribing, and narrative strategy.</p>
-            <p><strong>Email:</strong> <a href="mailto:mrsjamieturner109@gmail.com" style="color: var(--deep-green);">mrsjamieturner109@gmail.com</a></p>
-            <p><strong>Phone:</strong> (504) 462-5207</p>
-            <div style="margin-top: 2rem;">
-                <a href="https://www.linkedin.com/in/jamiehollandturner" class="read-more">View LinkedIn Profile</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 Jamie Turner · Master of Arts in English · Mississippi</p>
-        <p style="margin-top: 0.5rem;"><a href="https://medium.com/@mrsjamieturner109">Medium</a> · <a href="#portfolio">Portfolio</a></p>
-    </footer>
-
-</body>
-</html>
+As we continue to advance technology, acknowledging the boundaries of AI in human emotional understanding is vital. We must ensure that while we benefit from AI's capabilities, we do not overlook the essential aspects of human connection that it cannot replicate.
