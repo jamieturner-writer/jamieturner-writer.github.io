@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jamie Turner | Writer · Educator · AI Specialist</title>
+    <title>Jamie Turner | Grant Strategist · Technical Scribe · AI Specialist</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* ========== RESET & BASE ========== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --cream: #FAF7F2;
             --deep-green: #2C4A3E;
@@ -22,866 +17,168 @@
             --white: #FFFFFF;
             --light-border: #E8E2DA;
         }
-
-        body {
-            font-family: 'Lora', Georgia, serif;
-            background-color: var(--cream);
-            color: var(--text-dark);
-            line-height: 1.8;
-        }
+        body { font-family: 'Lora', Georgia, serif; background-color: var(--cream); color: var(--text-dark); line-height: 1.8; }
 
         /* ========== NAVIGATION ========== */
-        nav {
-            background-color: var(--white);
-            border-bottom: 1px solid var(--light-border);
-            padding: 1.2rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-family: 'Lora', serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--deep-green);
-            text-decoration: none;
-        }
-
-        .nav-logo span {
-            color: var(--gold);
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 400;
-            color: var(--warm-gray);
-            text-decoration: none;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--deep-green);
-        }
+        nav { background-color: var(--white); border-bottom: 1px solid var(--light-border); padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.4rem; font-weight: 700; color: var(--deep-green); text-decoration: none; }
+        .nav-logo span { color: var(--gold); }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--warm-gray); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--deep-green); }
 
         /* ========== HERO SECTION ========== */
-        .hero {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 5rem 2rem 4rem;
-            text-align: center;
-        }
+        .hero { max-width: 900px; margin: 0 auto; padding: 6rem 2rem 4rem; text-align: center; }
+        .hero h1 { font-size: 3.2rem; color: var(--deep-green); margin-bottom: 0.5rem; }
+        .hero .tagline { font-family: 'Inter', sans-serif; font-size: 1rem; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 2rem; }
+        .hero .intro { font-size: 1.25rem; color: var(--warm-gray); max-width: 700px; margin: 0 auto; line-height: 1.8; }
 
-        .hero h1 {
-            font-size: 2.8rem;
-            color: var(--deep-green);
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
+        /* ========== SECTION STYLING ========== */
+        section { padding: 5rem 2rem; }
+        .section-title { text-align: center; font-size: 2rem; color: var(--deep-green); margin-bottom: 3rem; }
+        .container { max-width: 1100px; margin: 0 auto; }
 
-        .hero .tagline {
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            color: var(--gold);
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-weight: 300;
-            margin-bottom: 2rem;
-        }
+        /* ========== SERVICES GRID ========== */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: var(--white); border: 1px solid var(--light-border); padding: 3rem 2rem; border-radius: 8px; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--deep-green); margin-bottom: 1rem; font-size: 1.4rem; }
+        .card p { font-family: 'Inter', sans-serif; font-size: 0.95rem; color: var(--warm-gray); }
 
-        .hero .philosophy {
-            font-size: 1.4rem;
-            color: var(--deep-green);
-            line-height: 1.8;
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-        }
-
-        .hero .intro {
-            font-size: 1.15rem;
-            color: var(--warm-gray);
-            line-height: 2;
-            font-style: normal;
-        }
-
-        .divider {
-            width: 60px;
-            height: 2px;
-            background-color: var(--gold);
-            margin: 3rem auto;
-        }
-
-        /* ========== WRITING CATEGORIES ========== */
-        .categories {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem 2rem 4rem;
-        }
-
-        .categories h2 {
-            text-align: center;
-            font-size: 1.8rem;
-            color: var(--deep-green);
-            margin-bottom: 2.5rem;
-        }
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .category-card {
-            background: var(--white);
-            border: 1px solid var(--light-border);
-            border-radius: 8px;
-            padding: 2.5rem 2rem;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .category-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-        }
-
-        .category-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .category-card h3 {
-            font-size: 1.2rem;
-            color: var(--deep-green);
-            margin-bottom: 0.8rem;
-        }
-
-        .category-card p {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            color: var(--warm-gray);
-            line-height: 1.7;
-        }
-
-        /* ========== FEATURED WRITING ========== */
-        .featured {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 2rem 4rem;
-        }
-
-        .featured h2 {
-            text-align: center;
-            font-size: 1.8rem;
-            color: var(--deep-green);
-            margin-bottom: 2.5rem;
-        }
-
-        .article-preview {
-            background: var(--white);
-            border: 1px solid var(--light-border);
-            border-radius: 8px;
-            padding: 2rem 2.5rem;
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .article-preview:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-        }
-
-        .article-tag {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--gold);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .article-preview h3 {
-            font-size: 1.3rem;
-            color: var(--deep-green);
-            margin-bottom: 0.5rem;
-        }
-
-        .article-preview p {
-            font-size: 1rem;
-            color: var(--warm-gray);
-            line-height: 1.8;
-        }
-
-        .article-date {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8rem;
-            color: #A9A4A0;
-        }
-
-        /* ========== ARTICLE META ROW ========== */
-        .article-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 1rem;
-            padding-top: 0.8rem;
-            border-top: 1px solid var(--light-border);
-        }
-
-        .read-link {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--deep-green);
-            text-decoration: none;
-            letter-spacing: 0.5px;
-            transition: color 0.3s;
-        }
-
-        .read-link:hover {
-            color: var(--gold);
-        }
+        /* ========== PORTFOLIO / WRITING ========== */
+        .writing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+        .article-preview { margin-bottom: 3rem; }
+        .tag { font-family: 'Inter', sans-serif; font-size: 0.7rem; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 0.5rem; display: block; }
+        .read-more { font-family: 'Inter', sans-serif; font-weight: 700; color: var(--deep-green); text-decoration: none; font-size: 0.9rem; }
 
         /* ========== ABOUT SECTION ========== */
-        .about-section {
-            background: var(--deep-green);
-            color: var(--cream);
-            padding: 4rem 2rem;
-        }
+        .about-section { background-color: var(--deep-green); color: var(--cream); }
+        .about-content { max-width: 750px; margin: 0 auto; }
+        .about-section h2 { color: var(--white); text-align: center; margin-bottom: 2rem; }
+        .heritage-box { border: 1px solid rgba(255,255,255,0.1); padding: 2rem; margin-top: 3rem; border-radius: 8px; display: flex; gap: 2rem; align-items: center; }
+        .heritage-box img { width: 150px; border-radius: 4px; filter: grayscale(100%); }
 
-        .about-inner {
-            max-width: 700px;
-            margin: 0 auto;
-        }
+        footer { text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--light-border); color: var(--warm-gray); font-family: 'Inter', sans-serif; font-size: 0.9rem; }
+        footer a { color: var(--deep-green); text-decoration: none; font-weight: 600; }
 
-        .about-section h2 {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            color: var(--cream);
-            text-align: center;
-        }
-
-        .about-section .lead-quote {
-            font-size: 1.3rem;
-            font-style: italic;
-            color: var(--gold);
-            text-align: center;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-
-        .about-section p {
-            font-size: 1.05rem;
-            line-height: 2;
-            color: #C8D5CF;
-            margin-bottom: 1.5rem;
-        }
-
-        .about-section em {
-            color: var(--cream);
-            font-style: italic;
-        }
-
-        /* ========== PULLOUT QUOTE ========== */
-        .pullout-quote {
-            border-left: 3px solid var(--gold);
-            padding: 1.5rem 2rem;
-            margin: 2.5rem 0;
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .pullout-quote blockquote {
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--cream);
-            line-height: 1.8;
-            margin-bottom: 0.5rem;
-        }
-
-        .pullout-quote .quote-source {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8rem;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* ========== NEWSPAPER CLIPPING SECTION ========== */
-        .clipping-section {
-            margin: 3rem 0;
-            text-align: center;
-        }
-
-        .clipping-section h3 {
-            font-size: 1.3rem;
-            color: var(--cream);
-            margin-bottom: 0.3rem;
-        }
-
-        .clipping-section .clipping-subtitle {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-        }
-
-        .clipping-images {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            align-items: flex-start;
-            flex-wrap: wrap;
-        }
-
-        .clipping-images img {
-            max-width: 320px;
-            width: 100%;
-            border-radius: 4px;
-            border: 3px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
-        }
-
-        .clipping-images img:hover {
-            transform: scale(1.03);
-        }
-
-        .clipping-caption {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8rem;
-            color: #A9B5AE;
-            margin-top: 1rem;
-            font-style: italic;
-        }
-
-        /* ========== BIG QUOTE CALLOUT ========== */
-        .big-quote {
-            text-align: center;
-            padding: 3rem 2rem;
-            margin: 2.5rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .big-quote blockquote {
-            font-size: 1.5rem;
-            font-style: italic;
-            color: var(--cream);
-            line-height: 1.7;
-            max-width: 550px;
-            margin: 0 auto 0.8rem;
-        }
-
-        .big-quote .quote-source {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8rem;
-            color: var(--gold);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        .closing-thought {
-            font-size: 1.15rem;
-            color: var(--gold);
-            text-align: center;
-            margin-top: 2rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        /* ========== CONTACT SECTION ========== */
-        .contact-section {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            font-size: 1.8rem;
-            color: var(--deep-green);
-            margin-bottom: 1rem;
-        }
-
-        .contact-section p {
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            color: var(--warm-gray);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        .contact-grid {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            background: var(--white);
-            border: 1px solid var(--light-border);
-            border-radius: 8px;
-            padding: 1.5rem 2rem;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-            min-width: 200px;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-        }
-
-        .contact-item .contact-label {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--gold);
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-
-        .contact-item .contact-value {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            color: var(--deep-green);
-            font-weight: 600;
-        }
-
-        /* ========== FOOTER ========== */
-        footer {
-            text-align: center;
-            padding: 2.5rem 2rem;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            color: var(--warm-gray);
-            border-top: 1px solid var(--light-border);
-        }
-
-        footer a {
-            color: var(--deep-green);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: var(--gold);
-        }
-/* ========== COMING SOON STYLING ========== */
-        .article-preview.coming-soon {
-            opacity: 0.85;
-            border-style: dashed;
-            background: linear-gradient(to bottom right, var(--white), #FDFCFB);
-            cursor: default;
-        }
-
-        .article-preview.coming-soon:hover {
-            transform: none;
-            box-shadow: none;
-        }
-
-        .article-preview.coming-soon h3 {
-            color: var(--warm-gray);
-        }
-        /* ========== RESPONSIVE ========== */
         @media (max-width: 768px) {
-            .category-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero .philosophy {
-                font-size: 1.1rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .nav-links a {
-                font-size: 0.8rem;
-            }
-
-            .article-meta {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
-
-            .clipping-images img {
-                max-width: 100%;
-            }
-
-            .big-quote blockquote {
-                font-size: 1.2rem;
-            }
-
-            .contact-grid {
-                flex-direction: column;
-                align-items: center;
-            }
+            .writing-grid { grid-template-columns: 1fr; }
+            .heritage-box { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <nav>
         <div class="nav-container">
             <a href="#" class="nav-logo">Jamie Turner<span>.</span></a>
             <ul class="nav-links">
-    <li><a href="#writing">Writing</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-</ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- HERO -->
     <section class="hero">
+        <p class="tagline">Strategic Writing & Technical Logic</p>
         <h1>Jamie Turner</h1>
-        <p class="tagline">Writer · Educator · AI Specialist</p>
-        <p class="philosophy">"Truth over tradition. Christ over crowds."</p>
         <p class="intro">
-            I write about that in-between space — where belief and doubt wrestle, 
-            where family ties are knotted by theology, and where faith is less 
-            about having answers and more about asking better questions.
-            <br><br>
-            Pull up a chair. I saved you a seat right by the exit.
+            Leveraging 15 years of educational expertise and a Master of Arts in English to bridge the gap between human narrative and technical precision.
         </p>
     </section>
 
-    <div class="divider"></div>
-
-    <!-- WRITING CATEGORIES -->
-  <section class="categories" id="services" style="background-color: var(--white); border-top: 1px solid var(--light-border); padding-bottom: 4rem;">
-        <h2 style="margin-top: 3rem; text-align: center; font-size: 1.8rem; color: var(--deep-green); margin-bottom: 2.5rem;">Professional Services</h2>
-        <div class="category-grid">
-
-            <div class="category-card">
-                <div class="category-icon">🖋️</div>
-                <h3>Grant Writing &amp; Strategy</h3>
-                <p>Leveraging 15 years in education and a Master’s in English to craft winning proposals. I specialize in educational grants, non-profit storytelling, and federal compliance.</p>
-            </div>
-
-            <div class="category-card">
-                <div class="category-icon">📊</div>
-                <h3>Technical Scribing</h3>
-                <p>Converting complex technical processes and instructional design needs into clear, actionable documentation. Precision meets narrative clarity.</p>
-            </div>
-
-            <div class="category-card">
-                <div class="category-icon">🤖</div>
-                <h3>AI Content Strategy</h3>
-                <p>Expertise in RLHF and human-centric AI output. I help organizations bridge the gap between machine efficiency and authentic human voice.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- FEATURED WRITING -->
-    <section class="featured">
-        <h2>Recent Writing</h2>
-
-        <!-- ARTICLE 1: The Swift Test -->
-        <div class="article-preview">
-            <div class="article-tag">Artificial Intelligence</div>
-            <h3>The Swift Test: Why Your AI Is Socially Awkward</h3>
-            <p>
-                Jonathan Swift made satire an art form — but can artificial 
-                intelligence tell the difference between a serious argument 
-                and a masterfully absurd one? A look at AI's inability to 
-                detect irony, satire, and the nuances of human rhetoric.
-            </p>
-            <div class="article-meta">
-                <span class="article-date">Published on Medium</span>
-                <a href="https://medium.com/@mrsjamieturner109/the-swift-test-why-your-ai-is-socially-awkward-819d875946d7" 
-                   target="_blank" 
-                   class="read-link">
-                   Read on Medium →
-                </a>
-            </div>
-        </div>
-
-        <!-- ARTICLE 2: The Big Three -->
-        <div class="article-preview">
-            <div class="article-tag">Artificial Intelligence</div>
-            <h3>The Big Three: Why AI Has No F***ing Intuition</h3>
-            <p>
-                Astrology might not be science — but it reveals something 
-                AI still can't grasp: the messy, intuitive, deeply human 
-                way we make sense of each other. If your AI can't read 
-                the room, it definitely can't read your birth chart.
-            </p>
-            <div class="article-meta">
-                <span class="article-date">Published on Medium</span>
-                <a href="https://medium.com/@mrsjamieturner109/the-big-three-why-ai-has-no-fucking-intuition-64661b674fbe" 
-                   target="_blank" 
-                   class="read-link">
-                   Read on Medium →
-                </a>
-            </div>
-      <div class="article-preview coming-soon">
-    <div class="article-tag">Deconstruction · Memoir</div>
-    <h3>The Altar Call I Didn't Answer</h3>
-    <p>
-        In 1988, the countdown to the return of Jesus had a date. To adults, it was speculative; 
-        to children, it was fact. I whispered salvation prayers constantly in the backseat 
-        of my mother’s car, staring at the horizon and imagining the plunge into smoke and 
-        screams if I did not say it right.
-    </p>
-    <div class="article-meta">
-        <span class="article-date">Excerpt from M.A. Thesis · Coming Soon</span>
-    </div>
-</div>
-
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section class="about-section" id="about">
-        <div class="about-inner">
-            <h2>About Jamie</h2>
-            
-            <p class="lead-quote">
-                "When I was six, I thought writing was a way to learn something. 
-                Turns out, I was right."
-            </p>
-
-            <p>
-                Hi, I'm Jamie Turner. I was raised in a Southern Baptist pew, 
-                wandered into atheism in my twenties, and somehow found myself 
-                back at the pulpit — married to a pastor, no less. It's been 
-                a long, complicated walk of faith, full of detours, breakdowns, 
-                and unexpected grace.
-            </p>
-
-            <p>
-                Raised in the Southern Baptist tradition, I know firsthand how 
-                easy it is to confuse religious tradition with true faith. After 
-                years of searching, stumbling, and seeking answers, I'm learning — 
-                and writing — about the difference.
-            </p>
-
-            <p>
-                I grew up Southern Baptist. Not just on Sundays. I was a quiet kid, 
-                but I was always thinking. Always watching. I asked questions in my 
-                head long before I ever spoke them out loud. But the church I grew 
-                up in didn't really leave space for that. It shaped everything — 
-                how I talked, how I dressed, how I understood the world and my 
-                place in it. Looking back, it felt more like control than community. 
-                There wasn't much room for curiosity. There wasn't much room to breathe.
-            </p>
-
-            <!-- PULLOUT QUOTE 1 -->
-            <div class="pullout-quote">
-                <blockquote>
-                    "The hardest thing is meeting people that you don't really know. 
-                    It's kinda scary, but when you get used to them, it's not scary."
-                </blockquote>
-                <span class="quote-source">— Jamie, age 6, Wayne County newspaper</span>
-            </div>
-
-            <p>
-                I got married on my eighteenth birthday, thinking I was breaking free. 
-                In a way, I was. But that escape turned out to be its own kind of trap. 
-                That marriage didn't last long. I was divorced by the next year.
-            </p>
-
-            <p>
-                The good part of the story started at the local community college — 
-                the one everybody goes to. That's where I met my husband. We started 
-                talking, and I could tell early on this was different. We got married 
-                in 1999, and we've been together for 26 years now. Still here.
-            </p>
-
-            <p>
-                What drew us together was the talking. Long, hours-long conversations 
-                about everything we'd ever been taught and everything we were trying 
-                to figure out. We didn't call it deconstruction then. We just called it 
-                staying up late and getting the Bible out. Talking about what it meant, 
-                what we believed, what didn't sit right.
-            </p>
-
-            <!-- NEWSPAPER CLIPPING SECTION -->
-            <div class="clipping-section">
-                <h3>"Writing Attracts Girl to First Grade"</h3>
-                <p class="clipping-subtitle">Wayne County Newspaper, circa 1986</p>
-                <div class="clipping-images">
-                    <img src="clipping-headline.jpg" alt="Newspaper headline: Writing attracts girl to first grade, with photo of young Jamie on a tire swing">
-                    <img src="clipping-article.jpg" alt="Close-up of the newspaper article about six-year-old Jamie Holland">
+    <section id="services" style="background-color: var(--white); border-top: 1px solid var(--light-border);">
+        <div class="container">
+            <h2 class="section-title">Professional Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Grant Writing</h3>
+                    <p>Expertise in educational and non-profit grant development. I translate organizational missions into high-compliance, persuasive proposals for federal and private funding.</p>
                 </div>
-                <p class="clipping-caption">
-                    "Bright brown eyes stare into outer space and small pink lips purse 
-                    as Jamie Holland considers what she is most looking forward to in first grade."
-                </p>
+                <div class="card">
+                    <h3>Technical Scribing</h3>
+                    <p>Logic-based documentation and system auditing. I specialize in converting complex institutional catalogs and data into actionable, accurate technical language.</p>
+                </div>
+                <div class="card">
+                    <h3>AI Strategy</h3>
+                    <p>Human-centric feedback for large language models. I refine AI output through RLHF to ensure narrative nuance, factual grounding, and ethical alignment.</p>
+                </div>
             </div>
-
-            <!-- BIG PULLOUT QUOTE -->
-            <div class="big-quote">
-                <blockquote>
-                    "'Writing,' she announces triumphantly. She smiles widely, 
-                    revealing missing front teeth, and begins to swing her legs."
-                </blockquote>
-                <span class="quote-source">— Wayne County Newspaper, circa 1986</span>
-            </div>
-
-            <p>
-                When I was six years old, a young woman from our church wrote a little 
-                story about me for the local newspaper. I still have the folded 
-                black-and-white clipping, worn soft with age. The headline reads, 
-                "Writing attracts girl to first grade." I'm grinning toothless in the 
-                picture, sitting on our tire swing. My hair was curled under all the 
-                way around, a little brown bowl on my head.
-            </p>
-
-            <!-- PULLOUT QUOTE 2 -->
-            <div class="pullout-quote">
-                <blockquote>
-                    "Writing — because when you get through writing you can go over it 
-                    and you might get something out of it."
-                </blockquote>
-                <span class="quote-source">— Jamie, age 6, on why she was excited for first grade</span>
-            </div>
-
-            <p>
-                According to the article, I said I wanted to be a nurse. Well. 
-                That didn't turn out. I don't do well with bodily fluids. But what 
-                I told her I was most looking forward to was writing.
-            </p>
-
-            <!-- PULLOUT QUOTE 3 -->
-            <div class="pullout-quote">
-                <blockquote>
-                    "When someone does something bad and has to sit in a corner, 
-                    you get scared and think she's gonna do it to you," she says gravely.
-                </blockquote>
-                <span class="quote-source">— Jamie, age 6, on kindergarten fears</span>
-            </div>
-
-            <p>
-                Looking back, that actually makes a lot of sense. I grew up in a 
-                Bible-believing home, where we read to learn how to live — not just 
-                for knowledge, but for behavior, for answers. And I guess I figured 
-                out early on that reading and writing were how we got there.
-            </p>
-
-            <p>
-                Later, when I became a teacher, I realized not everybody learns that way. 
-                I used to get so excited talking about poetry or a good story, but 
-                sometimes I'd look up and see a room full of students blinking back at 
-                me, unmoved. They were not amused. I shrugged and kept going. I ranted 
-                about bad Robert Frost interpretations in pop culture. I mean, if we 
-                can't get <em>that</em> right, no wonder we mess up the Bible.
-            </p>
-
-            <p>
-                And those messes have turned into entire theologies. Whole clubs. 
-                With a lot of members.
-            </p>
-
-            <!-- PULLOUT QUOTE 4 -->
-            <div class="pullout-quote">
-                <blockquote>
-                    "It's easy, but when you get them (friends), they sometimes 
-                    get mad and sometimes they don't."
-                </blockquote>
-                <span class="quote-source">— Jamie, age 6, on the complexities of friendship</span>
-            </div>
-
-            <p>
-                Now I write about that too. The faith I was given. The faith I ran from. 
-                And the faith I'm returning to, slowly, with open eyes and a tender heart. 
-                I write for the ones who are sorting through the damage, for the ones who 
-                still love Jesus but have no idea what to do with church people, and for 
-                the ones who were told to sit down and be quiet.
-            </p>
-
-            <p>
-                I hold an M.A. in English &amp; Creative Writing from The University 
-                of Southern Mississippi. With over 15 years in education — spanning 
-                instructional design, curriculum development, and academic advising — 
-                I now bridge the gap between human-centric storytelling and artificial 
-                intelligence through RLHF and technical scribing.
-            </p>
-
-            <!-- BIG CLOSING QUOTE -->
-            <div class="big-quote">
-                <blockquote>
-                    "The small, brown-haired girl listens intently to the questions 
-                    and studies each one before answering."
-                </blockquote>
-                <span class="quote-source">— Wayne County Newspaper, circa 1986</span>
-            </div>
-
-            <p class="closing-thought">
-                If you've ever loved the church and been hurt by it, 
-                you're not alone. If you're reading this, you probably 
-                already knew that.
-            </p>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section class="contact-section" id="contact">
-        <h2>Get in Touch</h2>
-        <p>
-            Whether you're an editor, a fellow writer, or someone who just 
-            needs to know they're not the only one asking questions — 
-            I'd love to hear from you.
-        </p>
-        <div class="contact-grid">
-            <a class="contact-item" href="mailto:mrsjamieturner109@gmail.com">
-                <div class="contact-label">Email</div>
-                <div class="contact-value">mrsjamieturner109@gmail.com</div>
-            </a>
-            <a class="contact-item" href="tel:+15044625207">
-                <div class="contact-label">Phone</div>
-                <div class="contact-value">(504) 462-5207</div>
-            </a>
-            <a class="contact-item" href="https://www.linkedin.com/in/jamiehollandturner" target="_blank">
-                <div class="contact-label">LinkedIn</div>
-                <div class="contact-value">Jamie Turner</div>
-            </a>
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Selected Portfolio</h2>
+            <div class="writing-grid">
+                <div>
+                    <span class="tag">Featured Narrative</span>
+                    <h3>The Den of the Faithful</h3>
+                    <p style="margin-bottom: 1rem;">An analysis of "Wolf Pack" dynamics within modern institutions and the narrative cost of telling the truth. Published on Medium.</p>
+                    <a href="https://medium.com/@mrsjamieturner109" class="read-more">Read Essay →</a>
+                    
+                    <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--light-border);">
+                    
+                    <span class="tag">AI & Rhetoric</span>
+                    <h3>The Swift Test</h3>
+                    <p style="margin-bottom: 1rem;">Exploring the intersection of 18th-century satire and modern AI. Can machine learning detect the nuances of human irony?</p>
+                    <a href="https://medium.com/@mrsjamieturner109/the-swift-test-why-your-ai-is-socially-awkward-819d875946d7" class="read-more">Read on Medium →</a>
+                </div>
+                <div>
+                    <span class="tag">Grant Sample (Educational)</span>
+                    <h3>Literacy Initiative Strategy</h3>
+                    <p style="margin-bottom: 1rem;">A case study in aligning regional educational standards with foundation-level funding goals. Focused on rural Mississippi literacy outcomes.</p>
+                    <span style="color: var(--warm-gray); font-size: 0.9rem; font-style: italic;">Sample available upon request.</span>
+
+                    <hr style="margin: 2rem 0; border: 0; border-top: 1px solid var(--light-border);">
+
+                    <span class="tag">Technical Logic</span>
+                    <h3>DegreeWorks Audit Logic</h3>
+                    <p style="margin-bottom: 1rem;">Demonstrating the translation of academic catalogs into proprietary logic-based scribing language with 100% accuracy.</p>
+                    <span style="color: var(--warm-gray); font-size: 0.9rem; font-style: italic;">Technical documentation sample.</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <h2>About Jamie</h2>
+            <p>
+                I hold a Master of Arts in English with a 4.0 GPA. My career began in the classroom, where I spent 15 years mastering the art of instructional design and curriculum architecture. Today, I use that foundation to help organizations secure funding and document their most vital processes.
+            </p>
+            <p style="margin-top: 1rem;">
+                My approach is defined by a simple principle: Truth over tradition. Whether I am writing a grant or training an AI model, my goal is to find the most authentic and precise way to tell the story.
+            </p>
+
+            <div class="heritage-box">
+                <img src="clipping-headline.jpg" alt="Jamie age 6">
+                <div>
+                    <p style="font-size: 0.9rem; font-style: italic; color: var(--gold);">"Writing — because when you get through writing you can go over it and you might get something out of it."</p>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem; color: #A9B5AE;">— Jamie, age 6, Wayne County Newspaper</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center;">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p style="margin-bottom: 2rem;">Available for grant consulting, technical scribing, and narrative strategy.</p>
+            <p><strong>Email:</strong> <a href="mailto:mrsjamieturner109@gmail.com" style="color: var(--deep-green);">mrsjamieturner109@gmail.com</a></p>
+            <p><strong>Phone:</strong> (504) 462-5207</p>
+            <div style="margin-top: 2rem;">
+                <a href="https://www.linkedin.com/in/jamiehollandturner" class="read-more">View LinkedIn Profile</a>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>
-            <a href="https://www.linkedin.com/in/jamiehollandturner" target="_blank">LinkedIn</a> · 
-            <a href="https://medium.com/@mrsjamieturner109" target="_blank">Medium</a> · 
-            <a href="mailto:mrsjamieturner109@gmail.com">Email</a>
-        </p>
-        <p style="margin-top: 0.5rem;">© 2025 Jamie Turner. All rights reserved.</p>
+        <p>© 2026 Jamie Turner · Master of Arts in English · Mississippi</p>
+        <p style="margin-top: 0.5rem;"><a href="https://medium.com/@mrsjamieturner109">Medium</a> · <a href="#portfolio">Portfolio</a></p>
     </footer>
 
 </body>
